@@ -31,7 +31,7 @@ The driver name must match the resource started in your `server.cfg`. Ensure it 
 ## Interaction
 
 ```lua
-Config.interactionDistance   = 5.0
+Config.interactionDistance   = 2.0
 Config.showLootNotifications = true
 Config.showCooldownMessages  = true
 Config.removeRequiredItems   = true
@@ -39,7 +39,7 @@ Config.removeRequiredItems   = true
 
 | Option | Purpose | Default |
 |--------|---------|---------|
-| `interactionDistance` | How close (meters) a player must be to see the prompt and interact | `5.0` |
+| `interactionDistance` | How close (meters) a player must be to see the prompt and interact | `2.0` |
 | `showLootNotifications` | Show a toast notification when an item is picked up | `true` |
 | `showCooldownMessages` | Show remaining time when a box is on cooldown | `true` |
 | `removeRequiredItems` | Consume required items from inventory when the box is opened | `true` |

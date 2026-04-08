@@ -6,10 +6,6 @@
 - **One** SQL resource: `mysql-async` **or** `oxmysql`
 - `kq_link` (auto-detects your framework, inventory, and targeting system)
 
-## Optional Dependencies
-
-- `cd-dispatch`, `ps-dispatch`, or `core-dispatch` — for police dispatch alerts
-
 ## Setup Steps
 
 ### 1. Add the resource

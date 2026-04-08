@@ -12,9 +12,9 @@ A selection panel appears with two options:
 
 1. Click **Create New**
 2. You enter **freecam mode** — fly around with `WASD` and mouse
-3. Press `TAB` to cycle through box types (Crate, Small Safe, Big Safe, Shipping Container)
+3. Press `Q` to cycle through box types (Crate, Small Safe, Big Safe, Shipping Container)
 4. A ghost preview of the selected box follows your camera position
-5. Aim at the desired location and press `H` to confirm
+5. Aim at the desired location and press `Numpad Enter` to confirm
 
 After confirming:
 - The **3D Gizmo editor** appears for fine-tuning (see [Gizmo Editor](gizmo-editor.md))

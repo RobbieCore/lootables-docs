@@ -1,19 +1,11 @@
 # Requirements
 
-## Required Dependencies
+## Dependencies
 
 | Dependency | Purpose |
 |-----------|---------|
 | `mysql-async` or `oxmysql` | Database driver. One of these must be installed and started before `ls_lootables` |
 | `kq_link` | Auto-detects your framework, inventory system, and targeting system. Must be started before `ls_lootables` |
-
-## Optional Dependencies
-
-| Dependency | Purpose |
-|-----------|---------|
-| `cd-dispatch` | Police dispatch alerts (cd_dispatch) |
-| `ps-dispatch` | Police dispatch alerts (Project Sloth) |
-| `core-dispatch` | Police dispatch alerts (core_dispatch) |
 
 ## What kq_link Handles
 

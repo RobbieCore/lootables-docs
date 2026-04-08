@@ -15,17 +15,17 @@ A selection panel appears. Click **Create New** to start placing a fresh box.
 You enter **freecam mode**:
 
 - Use `WASD` to fly around the map
-- Press `TAB` to cycle through box types (Crate, Small Safe, Big Safe, Shipping Container)
+- Press `Q` to cycle through box types (Crate, Small Safe, Big Safe, Shipping Container)
 - A preview of the selected box follows your camera
-- Press `H` to confirm the position
+- Press `Numpad Enter` to confirm the position
 
 ## 4. Fine-tune with the Gizmo
 
 After confirming, the **3D Gizmo editor** appears:
 
-- `T` — Translate (move) mode
+- `W` — Translate (move) mode
 - `R` — Rotate mode
-- `G` — Snap to ground
+- `Left Alt` — Snap to ground
 - Drag the colored arrows to move along each axis
 
 ## 5. Configure the box
@@ -46,7 +46,7 @@ Click **Save**. The box is now live — players within range can interact with i
 ## Verify it works
 
 1. Walk up to the box as a non-admin player (or remove your admin permissions temporarily)
-2. You should see the interaction prompt within 5 meters (default `Config.interactionDistance`)
+2. You should see the interaction prompt within 2 meters (default `Config.interactionDistance`)
 3. Press `E` to start the minigame
 4. Complete the minigame to receive loot
 
