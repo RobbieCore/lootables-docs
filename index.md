@@ -13,7 +13,7 @@ features:
   - title: Lootables
     details: Database-driven lootable box system with in-game admin UI and skill-based minigames.
     icon:
-      src: /images/lootables.png
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/994d2753eb0d64ee9f80a2dab4fd1d8e57902f63.jpg
       width: 56
       height: 56
     link: /lootables/
@@ -22,7 +22,7 @@ features:
   - title: Cartel Island Heist
     details: Multi-stage island and bunker heist with armed guards, thermite breaches, and a card-swipe minigame.
     icon:
-      src: /images/rc_cartel_heist.png
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/e07654dd508ce1a16ae1407c663204009563c08e.jpg
       width: 56
       height: 56
     link: /rc_cartel_heist/
