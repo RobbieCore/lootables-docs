@@ -156,13 +156,7 @@ export default defineConfig({
         },
         {
           text: 'Developer API',
-          collapsed: false,
-          items: [
-            { text: 'Server Events', link: '/rc_cartel_heist/developer-api/server-events' },
-            { text: 'Client Events', link: '/rc_cartel_heist/developer-api/client-events' },
-            { text: 'NUI Callbacks', link: '/rc_cartel_heist/developer-api/nui-callbacks' },
-            { text: 'GlobalState Keys', link: '/rc_cartel_heist/developer-api/globalstate' },
-          ],
+          link: '/rc_cartel_heist/developer-api/',
         },
         {
           text: 'Troubleshooting',
