@@ -144,6 +144,20 @@ h1, h2, h3, h4, h5, h6,
   background: rgba(var(--brand-red-rgb), 0.12) !important;
   border-radius: var(--radius-md) !important;
   font-size: 22px !important;
+  width: 56px !important;
+  height: 56px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.VPFeature .icon img,
+.VPFeature .icon .VPImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 /* Buttons */
