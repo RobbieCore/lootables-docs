@@ -1,0 +1,252 @@
+/* ==========================================================================
+   Robicore Docs — Brand Theme
+   Overrides VitePress default theme with Robicore website colors & fonts.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Brand palette */
+  --brand-red: #E52D2D;
+  --brand-red-hover: #CC2424;
+  --brand-red-rgb: 229, 45, 45;
+  --brand-white: #EFEFF0;
+  --brand-black: #0C0B0E;
+  --brand-gray: #161418;
+  --brand-gray-light: #221F26;
+  --accent-secondary: #3DD8D8;
+  --accent-secondary-rgb: 61, 216, 216;
+  --accent-terminal: #39FF14;
+  --text-primary: rgba(239, 239, 240, 0.95);
+  --text-secondary: rgba(239, 239, 240, 0.65);
+  --text-muted: rgba(239, 239, 240, 0.38);
+  --border: rgba(239, 239, 240, 0.06);
+  --surface: rgba(255, 255, 255, 0.025);
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --color-success: #22c55e;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Geist', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* VitePress brand color mapping */
+  --vp-c-brand-1: var(--brand-red);
+  --vp-c-brand-2: var(--brand-red-hover);
+  --vp-c-brand-3: var(--brand-red);
+  --vp-c-brand-soft: rgba(var(--brand-red-rgb), 0.14);
+  --vp-c-brand-softer: rgba(var(--brand-red-rgb), 0.08);
+
+  --vp-c-tip-1: var(--accent-secondary);
+  --vp-c-tip-2: var(--accent-secondary);
+  --vp-c-tip-3: var(--accent-secondary);
+  --vp-c-tip-soft: rgba(var(--accent-secondary-rgb), 0.14);
+
+  /* Typography */
+  --vp-font-family-base: var(--font-body);
+  --vp-font-family-mono: var(--font-mono);
+
+  /* Home hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, var(--brand-red) 30%, var(--accent-secondary));
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--brand-red) 40%, var(--accent-secondary) 100%);
+  --vp-home-hero-image-filter: blur(56px);
+
+  /* Buttons */
+  --vp-button-brand-bg: var(--brand-red);
+  --vp-button-brand-hover-bg: var(--brand-red-hover);
+  --vp-button-brand-active-bg: var(--brand-red-hover);
+  --vp-button-brand-border: var(--brand-red);
+  --vp-button-brand-hover-border: var(--brand-red-hover);
+  --vp-button-brand-active-border: var(--brand-red-hover);
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-active-text: #fff;
+}
+
+/* Dark theme (primary) — this site is dark-first */
+.dark {
+  --vp-c-bg: var(--brand-black);
+  --vp-c-bg-alt: var(--brand-gray);
+  --vp-c-bg-elv: var(--brand-gray-light);
+  --vp-c-bg-soft: var(--brand-gray);
+
+  --vp-c-text-1: var(--text-primary);
+  --vp-c-text-2: var(--text-secondary);
+  --vp-c-text-3: var(--text-muted);
+
+  --vp-c-divider: var(--border);
+  --vp-c-border: var(--border);
+  --vp-c-gutter: var(--border);
+
+  --vp-c-default-soft: var(--surface);
+  --vp-c-gray-soft: var(--surface);
+
+  --vp-sidebar-bg-color: var(--brand-black);
+  --vp-nav-bg-color: rgba(12, 11, 14, 0.85);
+  --vp-code-block-bg: var(--brand-gray);
+  --vp-code-bg: var(--brand-gray-light);
+}
+
+/* Light theme — still using brand accents */
+:root:not(.dark) {
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #fafafa;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f5f5f5;
+}
+
+/* Display font for headings & hero */
+.VPHero .name,
+.VPHero .text,
+h1, h2, h3, h4, h5, h6,
+.VPFeature .title {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.VPHero .name {
+  font-weight: 800;
+}
+
+.VPHero .tagline {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+/* Code blocks: mono font + tighter radius */
+.vp-doc code,
+.vp-doc pre,
+.vp-doc kbd {
+  font-family: var(--font-mono);
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+/* Features grid — brand-styled cards */
+.VPFeature {
+  border: 1px solid var(--border) !important;
+  background: var(--surface) !important;
+  border-radius: var(--radius-lg) !important;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.dark .VPFeature:hover {
+  border-color: rgba(var(--brand-red-rgb), 0.45) !important;
+  background: rgba(var(--brand-red-rgb), 0.04) !important;
+  transform: translateY(-2px);
+}
+
+.VPFeature .icon {
+  background: rgba(var(--brand-red-rgb), 0.12) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 22px !important;
+}
+
+/* Buttons */
+.VPButton.brand {
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+}
+
+.VPButton.alt {
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.dark .VPButton.alt {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+.dark .VPButton.alt:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  background-color: rgba(var(--accent-secondary-rgb), 0.06);
+}
+
+/* Navbar refinement */
+.VPNavBar.has-sidebar .content-body,
+.VPNavBar .content-body {
+  backdrop-filter: blur(12px);
+}
+
+.VPNavBar .title {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* Links & inline code */
+.vp-doc a {
+  color: var(--brand-red);
+  text-decoration-color: rgba(var(--brand-red-rgb), 0.35);
+}
+
+.vp-doc a:hover {
+  color: var(--brand-red-hover);
+}
+
+.vp-doc :not(pre) > code {
+  background: var(--brand-gray-light);
+  color: var(--accent-secondary);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  font-size: 0.85em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: var(--brand-gray-light);
+}
+
+/* Sidebar polish */
+.VPSidebarItem.level-0 > .item > .text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--brand-red) !important;
+}
+
+/* Scrollbar (webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-gray-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--brand-red-rgb), 0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(var(--brand-red-rgb), 0.35);
+  color: #fff;
+}
+
+/* Tables */
+.vp-doc table {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.vp-doc tr {
+  background-color: transparent;
+}
+
+.dark .vp-doc th {
+  background: var(--brand-gray-light);
+  color: var(--text-primary);
+}

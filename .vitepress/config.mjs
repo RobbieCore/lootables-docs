@@ -3,9 +3,14 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Robicore Docs',
   description: 'Official documentation for Robicore FiveM scripts',
+  appearance: 'dark',
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'theme-color', content: '#E52D2D' }],
+    ['meta', { property: 'og:title', content: 'Robicore Docs' }],
+    ['meta', { property: 'og:description', content: 'Official documentation for Robicore FiveM scripts' }],
+    ['meta', { property: 'og:type', content: 'website' }],
   ],
 
   themeConfig: {
@@ -15,6 +20,7 @@ export default defineConfig({
         text: 'Scripts',
         items: [
           { text: 'Lootables', link: '/lootables/' },
+          { text: 'Cartel Island Heist', link: '/rc_cartel_heist/' },
         ],
       },
       { text: 'Store', link: 'https://robicore.com' },
