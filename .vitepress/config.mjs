@@ -95,6 +95,80 @@ export default defineConfig({
           link: '/lootables/troubleshooting',
         },
       ],
+
+      '/rc_cartel_heist/': [
+        {
+          text: 'Cartel Island Heist',
+          link: '/rc_cartel_heist/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Requirements', link: '/rc_cartel_heist/getting-started/requirements' },
+            { text: 'Installation', link: '/rc_cartel_heist/getting-started/installation' },
+          ],
+        },
+        {
+          text: 'Configuration',
+          collapsed: false,
+          items: [
+            { text: 'General Settings', link: '/rc_cartel_heist/configuration/general-settings' },
+            { text: 'NPCs & Island', link: '/rc_cartel_heist/configuration/npcs-and-island' },
+            { text: 'Items', link: '/rc_cartel_heist/configuration/items' },
+            { text: 'Police & Dispatch', link: '/rc_cartel_heist/configuration/police-and-dispatch' },
+            { text: 'Buyer', link: '/rc_cartel_heist/configuration/buyer' },
+            { text: 'Server Security', link: '/rc_cartel_heist/configuration/server-security' },
+          ],
+        },
+        {
+          text: 'Admin Guide',
+          collapsed: false,
+          items: [
+            { text: 'Commands', link: '/rc_cartel_heist/admin-guide/commands' },
+            { text: 'Reset Timers', link: '/rc_cartel_heist/admin-guide/reset-timers' },
+            { text: 'Bunker Access', link: '/rc_cartel_heist/admin-guide/bunker-access' },
+            { text: 'NPC Placement', link: '/rc_cartel_heist/admin-guide/npc-placement' },
+            { text: 'Disabling Props', link: '/rc_cartel_heist/admin-guide/disabling-props' },
+            { text: 'Security Configuration', link: '/rc_cartel_heist/admin-guide/security' },
+          ],
+        },
+        {
+          text: 'Player Guide',
+          collapsed: false,
+          items: [
+            { text: 'Heist Walkthrough', link: '/rc_cartel_heist/player-guide/walkthrough' },
+            { text: 'Items & Loot', link: '/rc_cartel_heist/player-guide/items-and-loot' },
+          ],
+        },
+        {
+          text: 'Customization',
+          collapsed: false,
+          items: [
+            { text: 'Editable Files', link: '/rc_cartel_heist/customization/editable-files' },
+            { text: 'Localization', link: '/rc_cartel_heist/customization/localization' },
+            { text: '3D Text Style', link: '/rc_cartel_heist/customization/3d-text-style' },
+            { text: 'Custom Loot Rewards', link: '/rc_cartel_heist/customization/loot-rewards' },
+            { text: 'Dispatch Integration', link: '/rc_cartel_heist/customization/dispatch-integration' },
+            { text: 'NPC Models & SQL Driver', link: '/rc_cartel_heist/customization/npc-models' },
+          ],
+        },
+        {
+          text: 'Developer API',
+          collapsed: false,
+          items: [
+            { text: 'Server Events', link: '/rc_cartel_heist/developer-api/server-events' },
+            { text: 'Client Events', link: '/rc_cartel_heist/developer-api/client-events' },
+            { text: 'NUI Callbacks', link: '/rc_cartel_heist/developer-api/nui-callbacks' },
+            { text: 'GlobalState Keys', link: '/rc_cartel_heist/developer-api/globalstate' },
+          ],
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/rc_cartel_heist/troubleshooting',
+        },
+      ],
     },
 
     socialLinks: [

@@ -2,7 +2,11 @@
 
 A full-featured FiveM heist script where players raid a cartel-controlled island and underground bunker to steal drugs, money, and jewellery.
 
-## Features
+[Purchase on Robicore Store →](https://robicore.com)
+
+---
+
+## Key Features
 
 - **Custom island** with streamed interior and cartel compound
 - **Armed NPC guards** patrolling the island and bunker interior
@@ -30,7 +34,11 @@ A full-featured FiveM heist script where players raid a cartel-controlled island
 | Targeting system | Optional | Only when `Config.interactionMode = 'targeting'` |
 | Dispatch system | Optional | Only when `Config.dispatch.enabled = true` |
 
-## Links
+## Next steps
 
-- [Store](https://robicore.com)
-- [Documentation](https://docs.robicore.com)
+- **[Getting Started](/rc_cartel_heist/getting-started/)** — install the resource, add items, and configure the script
+- **[Configuration](/rc_cartel_heist/configuration/)** — every `config.lua` option explained
+- **[Admin Guide](/rc_cartel_heist/admin-guide/)** — commands, reset timers, and NPC placement
+- **[Player Guide](/rc_cartel_heist/player-guide/)** — heist walkthrough, controls, and loot tables
+- **[Developer API](/rc_cartel_heist/developer-api/)** — events, GlobalState keys, and NUI callbacks
+- **[Troubleshooting](/rc_cartel_heist/troubleshooting)** — common issues and fixes
