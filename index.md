@@ -14,13 +14,15 @@ hero:
 
 ## What is kq_link?
 
-[`kq_link`](https://github.com/Kuzkay/kq_link) is a third-party resource by [KuzQuality](https://kuzquality.com/) that Robicore scripts depend on. In the author's own words:
+[`kq_link`](https://github.com/Kuzkay/kq_link) is a third-party resource by [KuzQuality](https://kuzquality.com/). It is listed as a required dependency on each script's Requirements page when applicable.
+
+In the author's own words:
 
 > A link between resources and frameworks. Including useful helper systems.
 >
 > This resource was made to link resources with frameworks and dependencies. Allow us to integrate any resource into all the frameworks and external resources listed below.
 
-It also adds helper functions and a custom interaction system on top of the framework/dependency bridge. See the [kq_link repository](https://github.com/Kuzkay/kq_link) and [KuzQuality docs](https://docs.kuzquality.com/kq-link/kq-link-or-installation-guide) for full details, supported frameworks, and installation instructions.
+For supported frameworks, installation steps, and the full helper reference, see the [kq_link repository](https://github.com/Kuzkay/kq_link) or the [KuzQuality installation guide](https://docs.kuzquality.com/kq-link/kq-link-or-installation-guide).
 
 ## Scripts
 
