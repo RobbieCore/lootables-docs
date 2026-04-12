@@ -141,15 +141,17 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .VPFeature .icon {
-  background: rgba(var(--brand-red-rgb), 0.12) !important;
+  background: transparent !important;
   border-radius: var(--radius-md) !important;
   font-size: 22px !important;
-  width: 56px !important;
-  height: 56px !important;
+  width: 160px !important;
+  height: 90px !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 0 !important;
+  margin-bottom: 1rem;
 }
 
 .VPFeature .icon img,
@@ -158,6 +160,7 @@ h1, h2, h3, h4, h5, h6,
   height: 100% !important;
   object-fit: cover;
   border-radius: var(--radius-md);
+  border: 1px solid var(--border);
 }
 
 /* Buttons */
