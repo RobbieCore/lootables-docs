@@ -8,26 +8,34 @@ hero:
   name: Robicore
   text: Documentation.
   tagline: Official docs for Robicore FiveM scripts.
+
+features:
+  - title: Lootables
+    details: Database-driven lootable box system with in-game admin UI and skill-based minigames.
+    icon:
+      src: /images/lootables.png
+      width: 56
+      height: 56
+    link: /lootables/
+    linkText: Read the docs
+
+  - title: Cartel Island Heist
+    details: Multi-stage island and bunker heist with armed guards, thermite breaches, and a card-swipe minigame.
+    icon:
+      src: /images/rc_cartel_heist.png
+      width: 56
+      height: 56
+    link: /rc_cartel_heist/
+    linkText: Read the docs
 ---
 
 <div class="vp-doc home-extras">
 
-## What is kq_link?
+## kq_link
 
-[`kq_link`](https://github.com/Kuzkay/kq_link) is a third-party resource by [KuzQuality](https://kuzquality.com/). It is listed as a required dependency on each script's Requirements page when applicable.
-
-In the author's own words:
-
-> A link between resources and frameworks. Including useful helper systems.
->
-> This resource was made to link resources with frameworks and dependencies. Allow us to integrate any resource into all the frameworks and external resources listed below.
+Some Robicore scripts depend on [`kq_link`](https://github.com/Kuzkay/kq_link), a third-party resource by [KuzQuality](https://kuzquality.com/) that acts as a compatibility layer between resources and frameworks. Each script's Requirements page states whether it is needed.
 
 For supported frameworks, installation steps, and the full helper reference, see the [kq_link repository](https://github.com/Kuzkay/kq_link) or the [KuzQuality installation guide](https://docs.kuzquality.com/kq-link/kq-link-or-installation-guide).
-
-## Scripts
-
-- **[Lootables](/lootables/)** — database-driven lootable box system with in-game admin UI and skill-based minigames.
-- **[Cartel Island Heist](/rc_cartel_heist/)** — multi-stage island and bunker heist with armed guards, thermite breaches, and a card-swipe minigame.
 
 </div>
 
@@ -42,15 +50,15 @@ For supported frameworks, installation steps, and the full helper reference, see
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--border);
 }
 
-.home-extras h2:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
+.home-extras p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 </style>
