@@ -31,8 +31,7 @@
 ## Police count requirement is blocking players
 
 - Check `Config.police.enabled` and `Config.police.minCount`
-- Individual boxes can override the minimum in their admin config
-- Setting per-box minimum to `0` disables the requirement for that box
+- Set `Config.police.minCount` to `0` to disable the requirement
 - Make sure `Config.police.jobNames` matches your server's actual police job names
 
 ## Dispatch alerts are not firing

@@ -61,6 +61,24 @@ local container = exports['ls_lootables']:GetContainerById(id)
 
 Returns the box data table or `nil` if not found.
 
+### Create New Safe
+
+Create a new safe and insert it into the database.
+
+```lua
+local success, safeId = exports['ls_lootables']:CreateNewSafe({
+    box_type_id = 2,           -- 2 = small safe, 3 = big safe
+    position = { x = 100.0, y = 200.0, z = 30.0, h = 90.0 },
+    model = 'ch_prop_ch_arcade_safe_body',  -- optional, defaults to prop_ld_int_safe_01
+    config = {                 -- optional, all fields have defaults
+        loot = {},
+        required_items = {},
+        required_weapons = {},
+        reset_time = 60000,
+    }
+})
+```
+
 ### Remove by ID
 
 ```lua

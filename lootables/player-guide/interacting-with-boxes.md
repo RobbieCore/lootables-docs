@@ -4,7 +4,7 @@
 
 Lootable boxes are placed throughout the game world by server admins. They appear as physical props — crates, safes, or shipping containers.
 
-Walk close to a box (within the server's configured interaction distance, default 5 meters).
+Walk close to a box (within the server's configured interaction distance, default 2 meters).
 
 ## Interaction Prompt
 

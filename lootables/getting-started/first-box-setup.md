@@ -36,7 +36,6 @@ The configuration panel opens on the right side of your screen:
 - **Loot Items** — Click "Add Item" to add drops. Set each item's chance (0-100), min/max amount
 - **Required Items** — Items the player must have to open the box (optionally consumed)
 - **Required Weapons** — Weapons the player must be holding
-- **Min Police** — Minimum police online to allow opening (0 = no requirement)
 - **Reset Time** — How long (in milliseconds) before the box can be looted again
 
 ## 6. Save

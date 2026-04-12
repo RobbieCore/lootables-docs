@@ -20,10 +20,6 @@ Config.police = {
 | `minCount` | Global minimum police required (0 = no requirement) | `0` |
 | `notifyPlayer` | Tell the player when there aren't enough police online | `true` |
 
-### Per-Box Override
-
-Each box can override the global `minCount` in its admin panel configuration. Setting a box's minimum to `0` disables the requirement for that specific box, even if the global minimum is higher.
-
 ### Multiple Police Jobs
 
 If your server has multiple police-type jobs:

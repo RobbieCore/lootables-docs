@@ -30,7 +30,6 @@ The configuration panel lets you set:
 | **Loot Items** | Add items with per-item chance (0-100) and min/max amounts |
 | **Required Items** | Items the player must have to open the box |
 | **Required Weapons** | Weapons the player must be holding |
-| **Min Police** | Minimum police online (0 = no requirement) |
 | **Reset Time** | Milliseconds before the box can be looted again |
 
 ## Saving
