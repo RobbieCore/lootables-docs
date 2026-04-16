@@ -7,7 +7,7 @@ Client-side exports for integrating with Lootables from other scripts.
 Register a callback that fires whenever a player successfully opens any lootable box.
 
 ```lua
-exports['ls_lootables']:RegisterOnPlayerSuccessCallback(function(type)
+exports['rc_lootables']:RegisterOnPlayerSuccessCallback(function(type)
     -- type: 'container', 'safe', or 'crate'
     print('Player opened a ' .. type)
 end)
@@ -27,7 +27,7 @@ end)
 ### Example: Custom Notification
 
 ```lua
-exports['ls_lootables']:RegisterOnPlayerSuccessCallback(function(type)
+exports['rc_lootables']:RegisterOnPlayerSuccessCallback(function(type)
     if type == 'container' then
         -- Show a custom notification for container opens
         TriggerEvent('mynotify:show', 'You cracked the container!')

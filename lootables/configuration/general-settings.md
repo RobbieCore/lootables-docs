@@ -11,7 +11,7 @@ Config.logs  = false
 
 | Option | Purpose | Default |
 |--------|---------|---------|
-| `Config.debug` | Enable debug output in server/client console | `false` |
+| `Config.debug` | Enable debug output. Also bypasses the `lootables.admin` ACE check. | `false` |
 | `Config.logs` | Enable logging | `false` |
 
 ## SQL Driver
@@ -26,7 +26,7 @@ Config.sqlDriver = "mysql"
 | `"oxmysql"` | `oxmysql` (`exports.oxmysql:query_async`) |
 | `"<resource>"` | Any resource that exposes `executeSync` (custom drivers) |
 
-The driver name must match the resource started in your `server.cfg`. Ensure it starts **before** `ls_lootables`.
+The driver name must match the resource started in your `server.cfg`. Ensure it starts **before** `rc_lootables`.
 
 ## Interaction
 

@@ -33,13 +33,13 @@ After creating an export named `bank_vault`, you can use it from any server-side
 
 ```lua
 -- Spawn the lootable at specific coordinates
-exports['ls_lootables']:SpawnLootable('bank_vault', vector3(x, y, z), heading, deleteOnLooted)
+exports['rc_lootables']:SpawnLootable('bank_vault', vector3(x, y, z), heading, deleteOnLooted)
 
 -- Reset it (make it lootable again)
-exports['ls_lootables']:ResetLootable('bank_vault')
+exports['rc_lootables']:ResetLootable('bank_vault')
 
 -- Delete it from the world
-exports['ls_lootables']:DeleteLootable('bank_vault')
+exports['rc_lootables']:DeleteLootable('bank_vault')
 ```
 
 See [Server Exports](../developer-api/server-exports.md) for the full API reference.

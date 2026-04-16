@@ -10,7 +10,7 @@
 ## Items are not being given to players
 
 - Ensure the **item name** in the loot configuration **exactly matches** the item name registered in your inventory system
-- Verify `kq_link` is started **before** `ls_lootables` in your `server.cfg`
+- Verify `kq_link` is started **before** `rc_lootables` in your `server.cfg`
 - Check server console for errors when a player picks up loot
 
 ## Admin commands are not working
@@ -43,7 +43,7 @@
 
 ## Database errors on startup
 
-- Ensure your SQL resource (`mysql-async` or `oxmysql`) starts **before** `ls_lootables`
+- Ensure your SQL resource (`mysql-async` or `oxmysql`) starts **before** `rc_lootables`
 - Verify `Config.sqlDriver` matches your SQL resource
 - Check server console for specific error messages
 

@@ -10,7 +10,7 @@
 
 ### 1. Add the resource
 
-Place the `ls_lootables` folder in your server's `resources/` directory.
+Place the `rc_lootables` folder in your server's `resources/` directory.
 
 ### 2. Configure your SQL driver
 
@@ -27,7 +27,7 @@ Config.sqlDriver = "oxmysql"  -- for oxmysql
 Add to your `server.cfg` **after** your framework, SQL resource, and `kq_link`:
 
 ```
-ensure ls_lootables
+ensure rc_lootables
 ```
 
 **Load order matters.** Your `server.cfg` should look something like:
@@ -36,7 +36,7 @@ ensure ls_lootables
 ensure mysql-async       # or oxmysql
 ensure es_extended       # or qb-core, etc.
 ensure kq_link
-ensure ls_lootables
+ensure rc_lootables
 ```
 
 ### 4. Grant admin permissions

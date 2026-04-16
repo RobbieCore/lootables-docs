@@ -4,8 +4,8 @@
 
 | Dependency | Purpose |
 |-----------|---------|
-| `mysql-async` or `oxmysql` | Database driver. One of these must be installed and started before `ls_lootables` |
-| `kq_link` | Auto-detects your framework, inventory system, and targeting system. Must be started before `ls_lootables` |
+| `mysql-async` or `oxmysql` | Database driver. One of these must be installed and started before `rc_lootables` |
+| `kq_link` | Auto-detects your framework, inventory system, and targeting system. Must be started before `rc_lootables` |
 
 ## What kq_link Handles
 
@@ -17,7 +17,7 @@
 - **Money** — adding, removing, balance checks
 - **Jobs** — police count, job detection
 
-No manual configuration is needed for any of these. Just make sure `kq_link` is started before `ls_lootables`.
+No manual configuration is needed for any of these. Just make sure `kq_link` is started before `rc_lootables`.
 
 ## Server Requirements
 
