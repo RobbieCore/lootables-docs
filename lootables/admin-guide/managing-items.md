@@ -1,40 +1,50 @@
 # Managing Items
 
-The Item Manager lets you create and manage the master list of loot items available across all boxes.
+> **v2.1.0 — this changed.** There's no separate master-item table any more. Items come **live from your active inventory** (ox_inventory, qb-inventory, qs-inventory, etc.) via the `kq_link` bridge. The old **Items** tab is now the **Presets** manager.
 
-## Open the Item Manager
+## How loot items flow
 
-Run `/items` in chat (requires `lootables.admin` ACE permission).
+1. When you add a loot entry to a box, the picker autocompletes against your server's registered items — pulled on-demand from `kq_link:GetInventoryItems()`.
+2. The box stores the **item name** (e.g. `bread`, `lockpick`) plus per-drop overrides (min / max / chance / prop).
+3. At open-time the server generates loot, and `kq_link` gives the items to the player through your inventory.
 
-## Adding an Item
+No manual master list to maintain. If an item exists in your inventory, it shows up in the picker.
 
-Click **Add Item** and fill in:
+## Requirements
+
+- `kq_link` version **≥ 1.22** (the `client-inventory-items` feature — PR #78 on `Kuzkay/kq_link`).
+- A supported inventory — ox, qb, ps, qs, codem, tgiann, jaksam, core, origen, chezza, ak47, or the native framework inventory.
+
+If the picker is empty, check `/restart kq_link` and confirm `Link.inventory` is set correctly in `kq_link/config.lua`.
+
+## Presets (the Items tab)
+
+Open the admin panel (`/lootables`) and switch to the **Items** tab. Presets are admin-curated overlays keyed by item name — reusable defaults so you don't have to re-enter min/max/chance/prop for the same item across many boxes.
+
+Each preset has:
 
 | Field | Description |
 |-------|-------------|
-| **Item Name** | Must **exactly match** the item name in your inventory system (e.g., `bread`, `lockpick`) |
-| **Display Name** | Friendly name shown in the admin UI |
-| **Category** | Group items for easier browsing (e.g., "Weapons", "Tools", "Food") |
-| **Min Amount** | Default minimum quantity per drop |
-| **Max Amount** | Default maximum quantity per drop |
-| **Chance** | Default drop chance (0-100) |
-| **Prop Model** | GTA prop model name displayed as the 3D loot drop in the world |
-| **Metadata** | Optional key-value data attached to the item |
+| **Preset name** | A label for your own reference (e.g. "Kitchen bread roll") |
+| **Item name** | The inventory item this preset overlays (autocompleted from the picker) |
+| **Min / Max** | Default quantity range when you drop this preset into a box |
+| **Chance** | Default drop chance (1–100) |
+| **Prop model** | Default world prop shown when the item drops |
+| **Prop offset / rotation** | Default placement relative to the box |
+| **Metadata** | Optional key/value overlay (see [Metadata Fields](metadata-fields.md)) |
 
-## Important Notes
+### Using a preset in a box
 
-- The **Item Name** is what gets given to the player's inventory via `kq_link`. It must match your inventory system exactly — a typo here means the item won't be given
-- **Min/Max/Chance** are defaults. When you add an item to a specific box, you can override these values per-box
-- **Prop Model** determines what 3D object the player sees on the ground after opening a box
+In the Editor tab, click **Add loot item**. The row has two sources: **Inventory** (live autocomplete) or **Preset** (your saved overlays). Pick a preset → its defaults populate the row instantly. You can still override any field per-box.
 
-## Editing Items
+## Icons
 
-Click on any existing item in the list to edit its properties. Changes apply to the master item definition. Boxes that reference this item will use the updated defaults (unless they have per-box overrides).
+Item icons come from the inventory's own image directory via `kq_link:GetInventoryImagePath()` — returns `(path, format)`, e.g. `('nui://ox_inventory/web/images/', 'png')`. The admin NUI stitches that with `item.image` (or falls back to `<name>.<format>`) to render icons without touching your server assets.
 
-## Deleting Items
+If `GetInventoryImagePath()` returns an empty string for your inventory (unverified paths on paid packs like ak47 / core / origen), icons won't render but everything else still works. You can patch the path in `kq_link/links/inventories/<inv>/client.lua` on your install.
 
-Remove items you no longer need. Boxes that reference a deleted item will skip it during loot generation.
+## Migrating from 2.0.x
 
-## Metadata
+The `rc_lootable_items` table is dropped automatically on first 2.1.0 boot. If you had custom presets-style data in the old items table, the migration preserves what it can into `rc_lootable_presets`.
 
-Items can have metadata fields attached (e.g., serial numbers, durability, weapon quality). See [Metadata Fields](metadata-fields.md) for how to define reusable metadata schemas.
+Item rows on existing boxes continue to work — they were already keyed by item name, not by a foreign-key ID.
