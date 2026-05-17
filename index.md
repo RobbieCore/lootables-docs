@@ -27,6 +27,15 @@ features:
       height: 90
     link: /rc_cartel_heist/
     linkText: Read the docs
+
+  - title: Extra Seats
+    details: Configurable cargo-area passenger seats for any vehicle, with a 3D in-game gizmo editor and authoritative server occupancy.
+    icon:
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/994d2753eb0d64ee9f80a2dab4fd1d8e57902f63.jpg
+      width: 160
+      height: 90
+    link: /rc_extra_seats/
+    linkText: Read the docs
 ---
 
 <div class="vp-doc home-extras">

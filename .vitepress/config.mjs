@@ -21,6 +21,7 @@ export default defineConfig({
         items: [
           { text: 'Lootables', link: '/lootables/' },
           { text: 'Cartel Island Heist', link: '/rc_cartel_heist/' },
+          { text: 'Extra Seats', link: '/rc_extra_seats/' },
         ],
       },
       { text: 'Store', link: 'https://robicore.com' },
@@ -161,6 +162,67 @@ export default defineConfig({
         {
           text: 'Troubleshooting',
           link: '/rc_cartel_heist/troubleshooting',
+        },
+      ],
+
+      '/rc_extra_seats/': [
+        {
+          text: 'Extra Seats',
+          link: '/rc_extra_seats/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Requirements', link: '/rc_extra_seats/getting-started/requirements' },
+            { text: 'Installation', link: '/rc_extra_seats/getting-started/installation' },
+            { text: 'First Seat Setup', link: '/rc_extra_seats/getting-started/first-seat-setup' },
+          ],
+        },
+        {
+          text: 'Configuration',
+          collapsed: false,
+          items: [
+            { text: 'General Settings', link: '/rc_extra_seats/configuration/general-settings' },
+            { text: 'Seat Definitions', link: '/rc_extra_seats/configuration/seat-definitions' },
+          ],
+        },
+        {
+          text: 'Admin Guide',
+          collapsed: false,
+          items: [
+            { text: 'Seat Editor', link: '/rc_extra_seats/admin-guide/seat-editor' },
+            { text: 'Admin Commands', link: '/rc_extra_seats/admin-guide/admin-commands' },
+          ],
+        },
+        {
+          text: 'Player Guide',
+          collapsed: false,
+          items: [
+            { text: 'Sitting and Standing', link: '/rc_extra_seats/player-guide/sitting-and-standing' },
+          ],
+        },
+        {
+          text: 'Customization',
+          collapsed: false,
+          items: [
+            { text: 'Editable Files', link: '/rc_extra_seats/customization/editable-files-overview' },
+            { text: 'Client Functions', link: '/rc_extra_seats/customization/client-functions' },
+            { text: 'Localization', link: '/rc_extra_seats/customization/localization' },
+          ],
+        },
+        {
+          text: 'Developer API',
+          collapsed: false,
+          items: [
+            { text: 'Server Exports', link: '/rc_extra_seats/developer-api/server-exports' },
+            { text: 'Client Exports', link: '/rc_extra_seats/developer-api/client-exports' },
+          ],
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/rc_extra_seats/troubleshooting',
         },
       ],
     },

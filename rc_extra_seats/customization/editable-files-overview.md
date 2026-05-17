@@ -11,9 +11,15 @@ The following files are outside the escrow lock. You can read and modify them fr
 | `client/util/transform.lua` | Matrix math helpers used by the editor and runtime |
 | `client/editor.lua` | The full in-game seat editor |
 | `server/editor.lua` | Server-side admin gate, broadcast handler, export archival, admin commands |
-| `shared/classes.lua` | `Seat`, `VehicleSeatConfig`, `Occupancy` class definitions |
 | `locale/locale.lua` | All player-facing UI strings |
 | `nui/*` | NUI page (HTML, CSS, JS) for the export panel and toast notifications |
+
+## Files you cannot edit
+
+| File | Why escrowed |
+|---|---|
+| `shared/classes.lua` | Core class layer (`Seat`, `VehicleSeatConfig`, `Occupancy`). These define the wire protocol between client and server and the JSON-encoded statebag format. Off-spec edits corrupt occupancy. The classes remain **callable as globals** from other resources — see the [Developer API](/rc_extra_seats/developer-api/server-exports#shared-globals-available-on-both-sides). |
+| `client/client.lua`, `client/functions.lua`, `server/server.lua`, `fxmanifest.lua` | Core runtime. Use the editable files above for any customization. |
 
 ## What you can safely change
 
@@ -28,5 +34,4 @@ The following files are outside the escrow lock. You can read and modify them fr
 
 - **Seat entry `kind` field values** — `'trunk'` is the only supported type. The field is reserved for future polymorphism.
 - **Event names** — The string prefixes like `rc_extra_seats:SetSeatOccupied` are used by both sides of the network. Renaming them on one side without the other breaks occupancy.
-- **`shared/classes.lua` class method signatures** — Other resources may call `GetSeatConfigForEntity`, `VehicleRegistry`, or the `Occupancy` methods. Changing signatures breaks those integrations. Adding new methods is safe.
-- **The `escrow_ignore` list in `fxmanifest.lua`** — Adding files to it has no effect on your local copy but matters if you redistribution the resource.
+- **The shared class globals** (`Seat`, `VehicleSeatConfig`, `Occupancy`, `VehicleRegistry`, `GetSeatConfigForEntity`) — these are escrowed but exposed as globals. Other resources may call them — see the [Developer API](/rc_extra_seats/developer-api/server-exports). Don't try to monkey-patch their methods.
