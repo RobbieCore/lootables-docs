@@ -2,18 +2,17 @@
 
 ## 1. Place the resource
 
-Drop the `rc_extra_seats` folder into your resources directory. The conventional location is inside a category folder:
+Drop the `rc_extra_seats` folder into your server's `resources/` directory:
 
 ```
 resources/
-  [bodyshop]/
-    rc_extra_seats/
-      config.lua
-      fxmanifest.lua
-      ...
+  rc_extra_seats/
+    config.lua
+    fxmanifest.lua
+    ...
 ```
 
-The bracketed folder name (`[bodyshop]`) is just a category — you can rename it or put the resource in any valid resource path.
+You can also nest it inside a bracketed category folder (e.g. `resources/[vehicles]/rc_extra_seats/`) if you organize resources that way. FiveM treats bracketed folders as containers and will discover any resource nested inside.
 
 ## 2. Add to server.cfg
 
