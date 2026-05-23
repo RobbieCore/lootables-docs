@@ -22,6 +22,7 @@ export default defineConfig({
           { text: 'Lootables', link: '/lootables/' },
           { text: 'Cartel Island Heist', link: '/rc_cartel_heist/' },
           { text: 'Extra Seats', link: '/rc_extra_seats/' },
+          { text: 'Marketplace', link: '/rc_marketplace/' },
         ],
       },
       { text: 'Store', link: 'https://robicore.com' },
@@ -223,6 +224,63 @@ export default defineConfig({
         {
           text: 'Troubleshooting',
           link: '/rc_extra_seats/troubleshooting',
+        },
+      ],
+
+      '/rc_marketplace/': [
+        {
+          text: 'Marketplace',
+          link: '/rc_marketplace/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Requirements', link: '/rc_marketplace/getting-started/requirements' },
+            { text: 'Installation', link: '/rc_marketplace/getting-started/installation' },
+            { text: 'Posting Your First Ad', link: '/rc_marketplace/getting-started/first-ad' },
+          ],
+        },
+        {
+          text: 'Player Guide',
+          collapsed: false,
+          items: [
+            { text: 'Browsing Ads', link: '/rc_marketplace/player-guide/browsing-ads' },
+            { text: 'Posting an Ad', link: '/rc_marketplace/player-guide/posting-an-ad' },
+            { text: 'Messaging Sellers', link: '/rc_marketplace/player-guide/messaging-sellers' },
+            { text: 'Setting a Waypoint', link: '/rc_marketplace/player-guide/setting-a-waypoint' },
+          ],
+        },
+        {
+          text: 'Admin Guide',
+          collapsed: false,
+          items: [
+            { text: 'Admin Panel', link: '/rc_marketplace/admin-guide/admin-panel' },
+            { text: 'Bans & Moderation', link: '/rc_marketplace/admin-guide/bans-and-moderation' },
+          ],
+        },
+        {
+          text: 'Configuration',
+          collapsed: false,
+          items: [
+            { text: 'General Settings', link: '/rc_marketplace/configuration/general-settings' },
+            { text: 'In-Game Camera', link: '/rc_marketplace/configuration/in-game-camera' },
+            { text: 'Discord Webhook', link: '/rc_marketplace/configuration/discord-webhook' },
+          ],
+        },
+        {
+          text: 'Customization',
+          collapsed: false,
+          items: [
+            { text: 'Editable Files', link: '/rc_marketplace/customization/editable-files-overview' },
+            { text: 'Localization', link: '/rc_marketplace/customization/localization' },
+            { text: 'Theme', link: '/rc_marketplace/customization/theme' },
+          ],
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/rc_marketplace/troubleshooting',
         },
       ],
     },

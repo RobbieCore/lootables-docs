@@ -36,6 +36,11 @@ features:
       height: 90
     link: /rc_extra_seats/
     linkText: Read the docs
+
+  - title: Marketplace
+    details: In-game ads browser — six categories, phone + desktop UI, GTA map pin + waypoint, buyer–seller chat, in-game admin panel.
+    link: /rc_marketplace/
+    linkText: Read the docs
 ---
 
 <div class="vp-doc home-extras">
