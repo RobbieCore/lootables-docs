@@ -6,7 +6,7 @@ A quick walkthrough from opening the marketplace to a live published listing.
 
 **Phone mode:** open your phone and tap the **Marketplace** app icon.
 
-**Standalone mode** (no supported phone running): type `/marketplace` in chat.
+**Standalone mode** (no compatible phone running): type `/marketplace` in chat.
 
 The home screen loads with a featured/promoted ads carousel at the top and category nav buttons below.
 
@@ -20,20 +20,22 @@ The **Create New Ad** form opens.
 
 | Field | Notes |
 |---|---|
-| **Ad Type** | Select one: Car, Item, Job Offer, Real Estate, Weapon, or Other. This determines which detail fields appear below. |
-| **Ad Listing Name** | Short title, e.g. "Selling Custom Sports Car". |
-| **Description** | Full ad text. |
-| **Price** | Leave blank for free / negotiable. |
-| **Location** | Text label for the location. Click **Use current location** to auto-fill from your in-game position, or click on the map to pin a specific spot. |
+| **Ad Type** | Select one: Car, Item, Job Offer, Real Estate, Weapon, or Other. This controls which category-specific fields appear below. |
+| **Ad Listing Name** | Short title, e.g. "Selling Custom Sports Car". Required. |
+| **Description** | Full ad text. Required. |
+| **Price** | Numeric value. Required (use `0` for free). |
+| **Location** | Text label for the location. Click **Use my position** to auto-fill from your in-game position, or click anywhere on the map to pin a custom spot. Required. |
 
 ## 4. Add images
 
-Click **+ Add Image**. Each image slot accepts:
+Click **+ Insert URL** or paste an image URL directly. Each image slot accepts:
 
 - A direct `https://` or `http://` URL (max 2 048 characters).
-- A `data:image/jpeg`, `data:image/png`, or `data:image/webp` base64 string pasted from clipboard (max 200 KB).
+- A `data:image/jpeg`, `data:image/png`, or `data:image/webp` base64 string (max 200 KB) — pasting a screenshot from clipboard (`Ctrl+V`) produces an accepted format.
 
-If `screenshot-basic` is running and `Config.screenshot.enabled = true`, a **Take a picture** button appears. Click it to enter the in-game camera, frame your shot, then left-click to capture. The image attaches automatically. Right-click cancels.
+Up to 5 images per ad.
+
+If `screenshot-basic` is running and `Config.screenshot.enabled = true`, a **Take a picture** button appears. Click it to enter the in-game camera, frame your shot, then left-click to capture. Right-click cancels. This button is desktop-only and is hidden in phone mode.
 
 Invalid URLs are highlighted in red before submission. Fix them before posting.
 
@@ -51,18 +53,18 @@ Invalid URLs are highlighted in red before submission. Fix them before posting.
 
 ## 6. Optional: Promote the ad
 
-Check **Promote Ad** to include the listing in the featured carousel on the home screen. The promotion cost is shown on the form (set in the admin panel). This is charged in addition to the base ad cost.
+Check **Promote Ad** to include the listing in the featured carousel on the home screen. The promotion cost is shown in the form. It is charged in addition to the base posting cost.
 
 ## 7. Post
 
-Click **Post**. The server checks:
+Click **Post Ad**. The server checks:
 
 1. Whether you are banned from posting.
 2. Whether you have enough funds (base cost + optional promotion cost).
-3. Whether you are below your per-player ad limit.
+3. Whether you are below the per-player ad limit.
 
-On success you see "Ad posted successfully!" and the listing appears in the relevant category immediately for all online players.
+On success you see "Ad created successfully!" and the listing appears in its category immediately for all connected players.
 
 ::: tip
-The costs, currency symbol, and max-ads limit shown in the form are live values from the server — they update the moment an admin changes them in `/mpadmin`, no restart needed.
+The costs, currency symbol, and max-ads limit shown in the form are live values from the server. They update the moment an admin changes them in `/mpadmin` — no restart required.
 :::

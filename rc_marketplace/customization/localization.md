@@ -2,43 +2,53 @@
 
 ## Location
 
-All user-facing strings live in `locale/locale.lua`. The file exports a `Locale` table where every key is the English default and every value is the translated string.
+All user-facing strings live in `locale/locale.lua`. The file exports a `Locale` table where every entry maps a dot-notation key to its displayed string:
 
 ```lua
 Locale = {
-    ['Create Listing']  = 'Create Listing',
-    ['Messages']        = 'Messages',
-    ['Post']            = 'Post',
-    ['Delete']          = 'Delete',
+    ['listing.create']    = 'Create Listing',
+    ['nav.messages']      = 'Messages',
+    ['post']              = 'Post',
+    ['delete']            = 'Delete',
+    ['category.cars']     = 'Cars',
+    ['category.jobs']     = 'Jobs',
     -- ...
 }
 ```
 
-## Changing a string
+## Translating a string
 
-Edit the value (right-hand side) for any key. Do not change the key itself — the NUI looks up strings by the exact English key.
+Edit the value (right-hand side) for any key. Do not change the key itself — the NUI looks up strings by exact key name. A renamed key causes the raw key string to appear in the UI instead of the translated label.
 
 ```lua
 -- Change the posting button label to French
-['Post'] = 'Publier',
+['post'] = 'Publier',
+
+-- Change the Delete button label
+['delete'] = 'Supprimer',
 ```
 
 Restart the resource after saving.
 
 ## Adding a second language file
 
-The whole `locale/` folder is in `escrow_ignore`, so you can add files there. However, the resource loads only `locale/locale.lua` as its `Locale` table. The practical approach is to keep a translated copy of the table in `locale/locale.lua` directly, or to `require` / `dofile` additional files from within `locale/locale.lua` and merge the results into `Locale`.
+The entire `locale/` folder is in `escrow_ignore`, so you can add files there. The resource loads only `locale/locale.lua` as the active `Locale` table. To use a separate language file, either:
 
-## Full string list
+- Replace the values in `locale/locale.lua` directly with your translated strings, or
+- Add a `locale/fr.lua` (or similar) and merge it into `Locale` from within `locale/locale.lua`.
 
-The table in `locale/locale.lua` contains every string rendered by the NUI — navigation labels, form field placeholders, error messages, button labels, and chat UI text. Open the file to see the complete list.
-
-Notable entries for customization:
+## Notable keys
 
 | Key | Used for |
 |---|---|
-| `'What are you looking for today?'` | Home screen search placeholder |
-| `'Ad posted successfully!'` | Success toast after posting |
-| `'Insufficient funds to post an ad.'` | Error when player cannot afford the ad cost |
-| `'You have reached the maximum number of ads.'` | Error when player hits the per-player limit |
-| `'Some images are invalid. Please fix them before submitting.'` | Image validation error |
+| `'listing.searchPrompt'` | Home screen search placeholder |
+| `'notification.adPosted'` | Success toast after posting |
+| `'error.insufficientFunds'` | Error when player cannot afford the ad cost |
+| `'error.maxImages'` | Error when the image limit is reached |
+| `'error.imagesInvalid'` | Image validation error shown before submission |
+| `'ad.chatWithPoster'` | Chat button label on the full ad view |
+| `'map.pickOnMap'` | Map pin button label in the ad form |
+| `'map.setWaypoint'` | Waypoint button label on the map widget |
+| `'admin.panel'` | Admin panel nav label |
+
+The full list is in `locale/locale.lua` — every key in that file corresponds to a string rendered somewhere in the NUI.

@@ -1,6 +1,6 @@
 # Theme
 
-Visual styling is defined in `ui.config.lua` as inline CSS strings. The file contains two complete theme objects: `theme_light` and `theme_dark`. The NUI applies whichever theme is active.
+Visual styling is defined in `ui.config.lua` as inline CSS strings. The file contains two complete theme objects: `theme_light` and `theme_dark`. The NUI applies whichever theme the player has selected in the Settings panel.
 
 ## Structure
 
@@ -13,7 +13,7 @@ UI.themes = {
             cars  = { main = "background: ...", price = "color: ...", ... },
             jobs  = { ... },
             items = { ... },
-            -- ...
+            -- other categories follow the same shape
         },
         desktop      = "background: ...",
         navButtons   = { home = "...", cars = "...", ... },
@@ -23,34 +23,43 @@ UI.themes = {
         -- ...
     },
     theme_dark = {
-        -- same structure, different colors
+        -- identical structure, different color values
     },
 }
 ```
 
-Every value is a CSS inline-style string passed directly to a `style` attribute in the Vue component. Change any value to any valid CSS.
+Every value is a CSS inline-style string passed directly to a `style` attribute in the Vue component. Any valid CSS for that context is accepted.
 
 ## Per-region keys
 
-| Key | What it styles |
+| Key path | What it styles |
 |---|---|
 | `listing.<category>.main` | Listing card gradient header |
 | `listing.<category>.listingBackground` | Listing card body background |
+| `listing.<category>.descriptionText` | Description text color on listing card |
 | `listing.<category>.price` | Price text color |
-| `listing.<category>.block` | Detail block (mileage, salary, etc.) |
-| `desktop` | Full-panel background (standalone desktop mode) |
-| `navButtons.<key>` | Each navigation button by name (`home`, `cars`, `jobs`, `items`, `realEstates`, `weapons`, `other`, `createNew`, `messages`, `myAds`, `settings`) |
-| `viewAd.background.<category>` | Full ad view category-tinted background |
+| `listing.<category>.block` | Detail block background and text (mileage, salary, etc.) |
+| `desktop` | Full-panel background in standalone desktop mode |
+| `backButton` | Back button color and background |
+| `navButtons.background` | Nav bar background |
+| `navButtons.<key>` | Individual nav button (`home`, `cars`, `items`, `jobs`, `realEstates`, `weapons`, `other`, `createNew`, `messages`, `myAds`, `settings`) |
+| `viewAd.background.<category>` | Category-tinted background on the full ad view |
 | `viewAd.block1 / block2 / block3` | Detail blocks on the full ad view |
 | `chat.sidebar` | Chatters list sidebar |
-| `chat.message` | Chat bubble background + text |
-| `chat.messageInput.*` | Chat input field colors |
-| `newAd.background` | Create/edit ad form page background |
-| `newAd.formBackground` | Form container background |
-| `newAd.input.*` | Form input field colors |
-| `newAd.button.*` | Submit/action button colors and hover states |
+| `chat.activeChatter` | Active conversation highlight |
+| `chat.defaultChatter` | Inactive conversation entry |
+| `chat.background` | Chat thread background |
+| `chat.message` | Chat bubble background and text |
+| `chat.messageInput.*` | Input field background, placeholder, text, border, send button |
+| `newAd.background` | Create/edit form page background |
+| `newAd.formBackground` | Form container background and text |
+| `newAd.input.*` | Form input background, placeholder, and text colors |
+| `newAd.button.*` | Submit button default and hover states |
+| `newAd.cooldown` | Cooldown notice background and text |
 | `notification` | Toast notification overlay |
+| `action.cancel` | Cancel action button |
+| `action.delete` | Delete action button |
 
 ## Switching theme
 
-The active theme is `'dark'` or `'light'`. It maps to `UI.themes.theme_dark` or `UI.themes.theme_light` in `ui.config.lua`. Players switch theme from the Settings panel inside the marketplace.
+Players switch between dark and light theme from the Settings panel inside the marketplace. The selection is persisted locally per player. The theme maps to `UI.themes.theme_dark` or `UI.themes.theme_light` in `ui.config.lua`.

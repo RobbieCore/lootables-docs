@@ -1,10 +1,6 @@
 # rc_marketplace
 
-An in-game marketplace and ads browser for FiveM. Players post and browse classifieds across six categories, message sellers through an encrypted in-app chat, pin ad locations on a GTA V map, and save favourite listings. The UI runs as a phone app when a compatible phone resource is installed, or as a standalone desktop panel otherwise.
-
-<a href="https://robicore.com" target="_blank" style="display:inline-block;padding:10px 24px;background:#3451b2;color:white;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Purchase on Robicore Store</a>
-
----
+An in-game classifieds board for FiveM. Players browse, post, edit, and chat about ads across six categories. The panel runs as an app inside a compatible phone host when one is detected, or as a standalone `/marketplace` panel when no phone is present.
 
 ## Documentation map
 
@@ -15,8 +11,8 @@ An in-game marketplace and ads browser for FiveM. Players post and browse classi
 | [First Ad](/rc_marketplace/getting-started/first-ad) | End-to-end walkthrough from opening the panel to a live listing |
 | [Browsing Ads](/rc_marketplace/player-guide/browsing-ads) | Home feed, category browsing, promoted carousel, saved/liked ads |
 | [Posting an Ad](/rc_marketplace/player-guide/posting-an-ad) | Form fields by category, image rules, map pin, promoted option |
-| [Messaging Sellers](/rc_marketplace/player-guide/messaging-sellers) | Chat flow, unread indicators, notifications |
-| [Setting a Waypoint](/rc_marketplace/player-guide/setting-a-waypoint) | Navigation arrow button on an ad's map widget |
+| [Messaging Sellers](/rc_marketplace/player-guide/messaging-sellers) | Chat flow, notifications, rate limits |
+| [Setting a Waypoint](/rc_marketplace/player-guide/setting-a-waypoint) | Navigation button on an ad's map widget |
 | [Admin Panel](/rc_marketplace/admin-guide/admin-panel) | Runtime tunables via `/mpadmin`: costs, limits, currency, auto-remove |
 | [Bans and Moderation](/rc_marketplace/admin-guide/bans-and-moderation) | Banning players, unbanning, ad removal |
 | [General Settings](/rc_marketplace/configuration/general-settings) | `config.lua` bootstrap options |
@@ -30,14 +26,13 @@ An in-game marketplace and ads browser for FiveM. Players post and browse classi
 ## Key features
 
 - **Six ad categories** — Cars, Items, Jobs, Real Estates, Weapons, Other; each with category-specific detail fields.
-- **Promoted / featured ads** — optional promoted flag bumps an ad into the home carousel at posting cost.
+- **Promoted / featured ads** — optional promoted flag bumps an ad into the home carousel for an extra fee.
 - **GTA V Leaflet map picker** — click anywhere on the map to pin an ad's location; viewers can set a minimap waypoint from the ad.
 - **Encrypted in-app chat** — buyer-to-seller messaging stored with AES encryption; rate-limited and ad-derived to prevent spam.
-- **Phone integration** — auto-registers as a "Marketplace" app inside any supported phone resource on your server. Falls back to the `/marketplace` command when none is running.
-- **In-game camera** — optional `screenshot-basic` integration; takes a photo in-game and attaches it to the ad via Discord webhook, FTP, or base64.
-- **Runtime admin panel** — `/mpadmin` command opens an in-NUI control panel for prices, currency symbol, max ads per player, and auto-expiry window. No restart required.
+- **Phone integration** — auto-registers as a "Marketplace" app inside a compatible phone resource when one is detected. Falls back to the `/marketplace` command when none is running.
+- **In-game camera** — optional `screenshot-basic` integration; takes a scripted photo and attaches it via Discord webhook, FTP, or base64. Desktop mode only.
+- **Runtime admin panel** — `/mpadmin` opens an in-NUI control panel for prices, currency symbol, max ads per player, and auto-expiry window. No restart required.
 - **Ban management** — admins can ban/unban identifiers from posting; banned players' ads are removed automatically.
 - **Likes / saved ads** — players can like any ad; a dedicated saved tab shows their liked listings.
 - **Dual theme** — dark and light palettes defined in `ui.config.lua`; players toggle from the Settings panel.
-- **0.00 ms idle** — callback-driven; no per-tick polling.
 - **Database auto-migration** — all tables are created on first boot; no manual SQL import needed.
