@@ -66,9 +66,7 @@ Load `kq_link` (and your SQL resource) before `rc_marketplace`:
 ensure oxmysql
 ensure kq_link
 
-# optional phone (whichever you use)
-ensure yseries
-# ensure lb-phone
+# start your phone resource here (if any) before rc_marketplace
 
 ensure rc_marketplace
 ```

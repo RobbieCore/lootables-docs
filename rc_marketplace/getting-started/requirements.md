@@ -26,13 +26,9 @@ No manual configuration in `kq_link` is needed; just ensure it starts before `rc
 
 | Resource | Purpose |
 |---|---|
-| `screenshot-basic` | In-game photo capture for ad images. Button auto-hides when not running. Desktop mode only. |
-| `yseries` | Registers the marketplace as a phone app in Y-Series. |
-| `lb-phone` | Registers the marketplace as a phone app in lb-phone (Loaf Scripts). |
-| `gksphone` | Registers the marketplace as a phone app in gksphone v2. |
-| `qs-smartphone-pro` | Registers the marketplace as a phone app in Quasar smartphone. |
+| `screenshot-basic` | In-game photo capture for ad images. The "Take a picture" button auto-hides when this resource is not running. Desktop mode only. |
 
-Only one phone resource needs to be running. The script auto-detects whichever is started and falls back to the standalone `/marketplace` chat command if none are.
+The marketplace can also be hosted inside a phone app if your server runs a compatible phone resource — registration happens automatically when one is detected. If none is running, the marketplace is reachable through the standalone `/marketplace` command.
 
 ## Server requirements
 

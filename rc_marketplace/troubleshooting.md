@@ -2,15 +2,14 @@
 
 ## The marketplace panel does not open
 
-- If you are in phone mode, verify the phone resource is started **before** `rc_marketplace` in `server.cfg`. Check with `/rc_phone_status` — it prints the active adapter and the state of every supported phone resource.
-- If no phone is running, type `/marketplace` in chat. This command is registered automatically when no phone adapter is detected.
+- If you are in phone mode, verify the phone resource is started **before** `rc_marketplace` in `server.cfg`.
+- If no phone is running, type `/marketplace` in chat. This command is registered automatically when no phone is detected.
 - Check the F8 console for `SCRIPT ERROR` lines referencing `rc_marketplace`.
 
 ## The phone app does not appear in the phone's app list
 
 - The phone resource must be started before `rc_marketplace`. If the phone hot-restarts after `rc_marketplace`, the app re-registers automatically — but if the phone is started after `rc_marketplace` during server boot, the registration may miss.
-- Run `/rc_phone_status` to see which adapter is active and whether registration succeeded.
-- For `lb-phone`: the app registers inside the phone's own UI. If it is missing, restart both the phone resource and `rc_marketplace`.
+- If the app is still missing after a restart of both resources, your phone host may not be supported.
 
 ## "sqlFetch failed" errors on startup
 
@@ -55,7 +54,6 @@
 ## Messages are not delivered in real time
 
 - Messages are pushed to the recipient immediately when they are online. If the recipient is offline, they will see the message the next time they open the chat.
-- For `lb-phone` users: `lb-phone` does not pass plain NUI messages to the embedded iframe. The resource uses `lb-phone`'s custom app message API instead. If messages are missing in lb-phone mode, ensure `lb-phone` is the version that supports `SendCustomAppMessage`. Run `/rc_phone_status` to confirm the adapter is `lb-phone` and not `standalone`.
 
 ## Chat rate limit errors
 

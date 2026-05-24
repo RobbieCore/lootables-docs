@@ -51,13 +51,6 @@ Every value is a CSS inline-style string passed directly to a `style` attribute 
 | `newAd.button.*` | Submit/action button colors and hover states |
 | `notification` | Toast notification overlay |
 
-## Cross-script theme sync
+## Switching theme
 
-rc_marketplace participates in the RobiCore cross-script theme protocol. When a player toggles the theme:
-
-1. If `rc_core` is running, it calls `exports.rc_core:setTheme(theme)` to broadcast globally.
-2. If `rc_core` is not running, it writes the theme to a per-resource KVP and fires a `rc:themeChanged` local event.
-
-Any other RobiCore script that fires `rc:themeChanged` will also repaint the marketplace NUI with the new theme.
-
-The two theme names recognized are `'dark'` and `'light'`. They map to `UI.themes.theme_dark` and `UI.themes.theme_light` in `ui.config.lua`.
+The active theme is `'dark'` or `'light'`. It maps to `UI.themes.theme_dark` or `UI.themes.theme_light` in `ui.config.lua`. Players switch theme from the Settings panel inside the marketplace.
