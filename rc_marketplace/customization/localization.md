@@ -1,8 +1,8 @@
 # Localization
 
-## Location
+## Where strings live
 
-All user-facing strings live in `locale/locale.lua`. The file exports a `Locale` table where every entry maps a dot-notation key to its displayed string:
+All user-facing strings are in `locale/locale.lua`. The file defines a `Locale` table where each entry maps a dot-notation key to the string displayed in the interface:
 
 ```lua
 Locale = {
@@ -18,37 +18,37 @@ Locale = {
 
 ## Translating a string
 
-Edit the value (right-hand side) for any key. Do not change the key itself — the NUI looks up strings by exact key name. A renamed key causes the raw key string to appear in the UI instead of the translated label.
+Edit the value (right-hand side) for any key. Do not rename the key itself — the interface looks up strings by exact key. A renamed key causes the raw key string to appear in the UI.
 
 ```lua
--- Change the posting button label to French
-['post'] = 'Publier',
-
--- Change the Delete button label
+-- French example
+['post']   = 'Publier',
 ['delete'] = 'Supprimer',
+['listing.create'] = 'Créer une annonce',
 ```
 
-Restart the resource after saving.
+Save the file and restart the resource.
 
 ## Adding a second language file
 
-The entire `locale/` folder is in `escrow_ignore`, so you can add files there. The resource loads only `locale/locale.lua` as the active `Locale` table. To use a separate language file, either:
+The entire `locale/` folder is open. The resource loads `locale/locale.lua` as the active `Locale` table. To switch languages, either:
 
 - Replace the values in `locale/locale.lua` directly with your translated strings, or
-- Add a `locale/fr.lua` (or similar) and merge it into `Locale` from within `locale/locale.lua`.
+- Create a `locale/fr.lua` (or similar) and load it from within `locale/locale.lua`.
 
-## Notable keys
+## Key reference (selection)
 
-| Key | Used for |
+| Key | Displayed for |
 |---|---|
 | `'listing.searchPrompt'` | Home screen search placeholder |
-| `'notification.adPosted'` | Success toast after posting |
-| `'error.insufficientFunds'` | Error when player cannot afford the ad cost |
+| `'notification.adPosted'` | Success notice after posting |
+| `'error.insufficientFunds'` | Error when player cannot afford the posting cost |
 | `'error.maxImages'` | Error when the image limit is reached |
-| `'error.imagesInvalid'` | Image validation error shown before submission |
 | `'ad.chatWithPoster'` | Chat button label on the full ad view |
 | `'map.pickOnMap'` | Map pin button label in the ad form |
 | `'map.setWaypoint'` | Waypoint button label on the map widget |
-| `'admin.panel'` | Admin panel nav label |
+| `'admin.panel'` | Admin panel label in the nav bar |
+| `'admin.banSeller'` | Ban button label visible to admins on an ad view |
+| `'settings.theme'` | Theme section label in the Settings panel |
 
-The full list is in `locale/locale.lua` — every key in that file corresponds to a string rendered somewhere in the NUI.
+The full list is in `locale/locale.lua` — every key in that file corresponds to a string rendered somewhere in the interface.

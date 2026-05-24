@@ -2,50 +2,46 @@
 
 ## Opening the form
 
-Click **Create Listing** in the navigation bar. The form is the same whether you are in phone mode or standalone desktop mode.
+Click **Create Listing** in the navigation bar. The form is the same in phone mode and standalone desktop mode.
 
-## Image rules
+## Image requirements
 
-Every ad requires at least one image (maximum 5). Images are validated client-side and again server-side.
+Every ad requires at least one image (maximum 5). Images are validated before submission.
 
-| Format | Accepted | Limit |
-|---|---|---|
-| `https://` or `http://` URL | Yes | 2 048 characters max |
-| `data:image/jpeg;base64,...` | Yes | 200 KB max |
-| `data:image/png;base64,...` | Yes | 200 KB max |
-| `data:image/webp;base64,...` | Yes | 200 KB max |
-| Any other format (gif, bmp, non-image data URIs, etc.) | No | — |
+**Accepted formats:**
+- A direct `https://` or `http://` URL pointing to a publicly accessible image
+- A `data:image/jpeg`, `data:image/png`, or `data:image/webp` base64 string — pasting a screenshot from clipboard (`Ctrl+V`) produces an accepted format automatically
 
-Pasting a screenshot from the clipboard (`Ctrl+V`) produces a `data:image/webp;base64,...` string that is accepted. In-game camera output (discord or base64 mode) also produces accepted formats.
+All other formats (gif, bmp, non-image data URIs, etc.) are rejected. An invalid URL is highlighted in red; submission is blocked until it is fixed.
 
-If any image URL is invalid, the field is highlighted and submission is blocked until it is fixed.
+::: tip In-game camera
+If `screenshot-basic` is running and the admin has enabled it, a **Take a picture** button appears in the form (desktop mode only). Click it to enter the in-game camera. Left-click to capture; right-click to cancel.
+:::
 
 ## Location pin
 
-The location field has two parts: a text label and an optional map pin.
+The location field has a text label and an optional map pin:
 
-- **Use my position** — fills the text label with your current zone/street and places a pin at your in-game position.
-- **Map click** — click anywhere on the GTA V Leaflet map to set a custom pin. The zone name fills the text label automatically.
-- **Manual text** — type a location description directly in the text field without pinning.
+- **Use my position** — fills the text label with your current zone and street, and places a pin at your in-game coordinates.
+- **Map click** — click anywhere on the GTA V map to set a custom pin. The zone name fills the text label automatically.
+- **Manual text** — type a location description without setting a pin.
 
-The pin coordinates are stored with the ad and shown on the map widget in the full ad view.
+The pin is stored with the ad and shown on the map widget in the full ad view, where other players can set a waypoint to it.
 
 ## Ad costs
 
-The posting cost is displayed in the form before submission:
+The posting cost is shown in the form before submission:
 
 ```
-Base cost  +  Promotion cost (if Promote Ad is checked)
+Base posting cost  +  Promotion cost (if "Promote Ad" is checked)
 ```
 
-Both values are set by the admin in `/mpadmin`. The form always shows the current live values — no restart required for changes to appear.
-
-Funds are deducted from your cash account at submission. If you do not have enough, the post is rejected with an "Insufficient funds" message.
+Both values are set by the admin in `/mpadmin`. The form always shows current live values. Funds are deducted at submission. If you do not have enough, the post is rejected.
 
 ## Per-player ad limit
 
-If you have reached the server's maximum active ads limit, the post is rejected. The limit is set by the admin in `/mpadmin`.
+If you have reached the server's active-ads limit, the post is rejected. The limit is set by the admin in `/mpadmin`. Set to 0 for unlimited.
 
 ## After posting
 
-The ad appears in its category listing immediately for all connected players. A Discord webhook notification fires if the server has one configured.
+The ad appears in its category listing immediately for all connected players.
