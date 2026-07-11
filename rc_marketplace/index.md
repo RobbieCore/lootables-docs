@@ -4,6 +4,8 @@ title: rc_marketplace
 
 # rc_marketplace
 
+![rc_marketplace](/rc_marketplace/package.png)
+
 An in-game marketplace for FiveM. Players post, browse, and reply to ads across six categories. The panel runs as an app inside a compatible phone resource when one is detected, or opens via `/marketplace` when no phone is present.
 
 <a href="https://robicore.com" target="_blank" style="display:inline-block;padding:0.5rem 1.25rem;background:#E52D2D;color:#fff;font-weight:600;border-radius:4px;text-decoration:none;">Buy on Robicore Store</a>

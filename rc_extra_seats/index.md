@@ -1,5 +1,7 @@
 # rc_extra_seats
 
+![rc_extra_seats](/rc_extra_seats/package.jpg)
+
 A FiveM resource that attaches players to configurable positions on a vehicle (cargo beds, flatbeds, industrial bodies, etc.) and treats them as passengers. Seat positions are defined per vehicle model in `config.lua` or produced by the in-game gizmo editor.
 
 ## Documentation map

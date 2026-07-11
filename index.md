@@ -31,7 +31,7 @@ features:
   - title: Extra Seats
     details: Per-model passenger seat positions for any vehicle, defined in config.lua or placed with an in-game gizmo editor.
     icon:
-      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/994d2753eb0d64ee9f80a2dab4fd1d8e57902f63.jpg
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/94760fd46d91e42f90329cf277c64fb276663d28.jpg
       width: 160
       height: 90
     link: /rc_extra_seats/
@@ -39,11 +39,19 @@ features:
 
   - title: Marketplace
     details: In-game ads browser — six categories, phone + desktop UI, GTA map pin + waypoint, buyer–seller chat, in-game admin panel.
+    icon:
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/ec079db6fa0a508d733c2e98fab8a94da4c52e66.png
+      width: 160
+      height: 90
     link: /rc_marketplace/
     linkText: Read the docs
 
   - title: NPC Dealers
     details: Hire and run NPC street dealers from a burner phone — personalities, loyalty/heat/stress, and a full cop frisk + interrogation loop.
+    icon:
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/dad05860a0fa7a9c891d605a2cda5537adf749fd.png
+      width: 160
+      height: 90
     link: /dealer/
     linkText: Read the docs
 ---
