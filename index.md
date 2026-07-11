@@ -41,6 +41,11 @@ features:
     details: In-game ads browser — six categories, phone + desktop UI, GTA map pin + waypoint, buyer–seller chat, in-game admin panel.
     link: /rc_marketplace/
     linkText: Read the docs
+
+  - title: NPC Dealers
+    details: Hire and run NPC street dealers from a burner phone — personalities, loyalty/heat/stress, and a full cop frisk + interrogation loop.
+    link: /dealer/
+    linkText: Read the docs
 ---
 
 <div class="vp-doc home-extras">
