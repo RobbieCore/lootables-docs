@@ -23,6 +23,7 @@ export default defineConfig({
           { text: 'Cartel Island Heist', link: '/rc_cartel_heist/' },
           { text: 'Extra Seats', link: '/rc_extra_seats/' },
           { text: 'Marketplace', link: '/rc_marketplace/' },
+          { text: 'NPC Dealers', link: '/dealer/' },
         ],
       },
       { text: 'Store', link: 'https://robicore.com' },
@@ -281,6 +282,55 @@ export default defineConfig({
         {
           text: 'Troubleshooting',
           link: '/rc_marketplace/troubleshooting',
+        },
+      ],
+
+      '/dealer/': [
+        {
+          text: 'NPC Dealers',
+          link: '/dealer/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Requirements', link: '/dealer/getting-started/requirements' },
+            { text: 'Installation', link: '/dealer/getting-started/installation' },
+            { text: 'First Dealer Setup', link: '/dealer/getting-started/first-dealer-setup' },
+          ],
+        },
+        {
+          text: 'Configuration',
+          collapsed: false,
+          items: [
+            { text: 'General Settings', link: '/dealer/configuration/general-settings' },
+            { text: 'Commands & Keybinds', link: '/dealer/configuration/commands-and-keybinds' },
+            { text: 'Police Pressure', link: '/dealer/configuration/police-pressure' },
+            { text: 'Discoverability', link: '/dealer/configuration/discoverability' },
+            { text: 'Server Settings', link: '/dealer/configuration/server-settings' },
+            { text: 'Tuning Defaults', link: '/dealer/configuration/tuning-defaults' },
+          ],
+        },
+        {
+          text: 'Admin Guide',
+          collapsed: false,
+          items: [
+            { text: 'Admin Dashboard', link: '/dealer/admin-guide/admin-dashboard' },
+            { text: 'Recruiters & Spots', link: '/dealer/admin-guide/recruiters-and-spots' },
+          ],
+        },
+        {
+          text: 'Customization',
+          collapsed: false,
+          items: [
+            { text: 'Editable Files', link: '/dealer/customization/editable-files' },
+            { text: 'Localization', link: '/dealer/customization/localization' },
+          ],
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/dealer/troubleshooting',
         },
       ],
     },
