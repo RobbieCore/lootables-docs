@@ -76,7 +76,7 @@ Config.returnHomeDist = 6.0
 |--------|---------|---------|
 | `Config.spawnDistance` | Metres from a working dealer's corner at which their ped is streamed in for nearby clients. Lower this if many active dealers cause client load issues. | `120.0` |
 | `Config.walkInDistance` | If a dealer is already spawned within this distance of a newly assigned sell spot, they walk there instead of despawning and respawning. | `30.0` |
-| `Config.returnHomeDist` | How far a non-route dealer may drift from their home spot before the AI walks them back (e.g. after fleeing a cop). | `6.0` |
+| `Config.returnHomeDist` | How far a non-route dealer may drift from their home spot before they're walked back (e.g. after fleeing a cop). | `6.0` |
 
 ## Dealer Health
 

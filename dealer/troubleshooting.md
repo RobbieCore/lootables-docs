@@ -16,8 +16,8 @@
 
 ## The burner screen is blank or shows an error
 
-- The NUI was not built before starting the server. Run `cd nui && npm install && npm run build` and verify `nui/dist/nui.html` exists.
-- Restart the resource after building.
+- Confirm `nui/dist/nui.html` exists in the resource folder — it ships pre-built, so a missing file usually means an incomplete extract/upload.
+- Restart the resource after re-uploading the resource folder.
 
 ## Admin commands are not working
 

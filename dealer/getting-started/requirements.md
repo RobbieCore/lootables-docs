@@ -25,4 +25,3 @@ No manual framework configuration is needed inside `rc_dealer`. Set your framewo
 - FiveM server running **Cerulean** artifacts or newer
 - Lua 5.4 enabled (set automatically via `fxmanifest.lua`)
 - MySQL-compatible database accessible to `oxmysql`
-- Node.js and npm available on the machine that builds the NUI (see [Installation](installation.md))

@@ -9,7 +9,7 @@ A street-level economy script for FiveM. Players hire NPC dealers, keep them sto
 ## Key Features
 
 - **Burner phone interface** — owners manage all their dealers from a single in-game phone app: hire, supply, assign corners, collect earnings, arm, fire, pay bonuses, and read dealer texts
-- **NPC dealer AI** — dealers work assigned corners or walk custom routes, sell to players and ambient pedestrians, react to stress, flee cops, and may desert with stock if pushed too hard
+- **NPC dealer behavior** — dealers work assigned corners or walk custom routes, sell to players and ambient pedestrians, react to stress, flee cops, and may desert with stock if pushed too hard
 - **Hidden personalities** — each dealer rolls a hidden trait at hire (loyal, greedy, coward, snake) that governs sell rate, skim chance, lie rate, and snitch resistance
 - **In-world police interactions** — cops frisk dealers for contraband and crack them in a multi-round interrogation; results write case intel into a carried evidence notebook item
 - **Heat and stress system** — dealer heat draws police dispatch; stress from cops nearby or players aiming at them drives flight, texts to the owner, and eventual desertion
