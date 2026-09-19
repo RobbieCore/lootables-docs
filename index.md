@@ -37,6 +37,24 @@ features:
     link: /rc_extra_seats/
     linkText: Read the docs
 
+  - title: Lawnmowing Job
+    details: A lawn-mowing job with an in-game admin panel, a yard map editor and server-priced payouts — truck, trailer and ride-on mower.
+    icon:
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/c57f81af8b3185d2b8605de04ad7f98153050d70.png
+      width: 160
+      height: 90
+    link: /rc_mower/
+    linkText: Read the docs
+
+  - title: Lawnmowing Job Addon
+    details: The expansion — crews of up to four, three rented tools with their own yard work, and a carry loop that turns cut grass into extra cash.
+    icon:
+      src: https://dunb17ur4ymx4.cloudfront.net/packages/images/9ceac9dba99b180eac16bb849dd82c7a5e5ee565.png
+      width: 160
+      height: 90
+    link: /rc_mower_addon/
+    linkText: Read the docs
+
   - title: Marketplace
     details: In-game ads browser — six categories, phone + desktop UI, GTA map pin + waypoint, buyer–seller chat, in-game admin panel.
     icon:
