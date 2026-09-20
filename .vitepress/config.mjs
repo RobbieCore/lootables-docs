@@ -22,6 +22,8 @@ export default defineConfig({
           { text: 'Lootables', link: '/lootables/' },
           { text: 'Cartel Island Heist', link: '/rc_cartel_heist/' },
           { text: 'Extra Seats', link: '/rc_extra_seats/' },
+          { text: 'Lawnmowing Job', link: '/rc_mower/' },
+          { text: 'Lawnmowing Job Addon', link: '/rc_mower_addon/' },
           { text: 'Marketplace', link: '/rc_marketplace/' },
           { text: 'NPC Dealers', link: '/dealer/' },
         ],
@@ -282,6 +284,78 @@ export default defineConfig({
         {
           text: 'Troubleshooting',
           link: '/rc_marketplace/troubleshooting',
+        },
+      ],
+
+      '/rc_mower/': [
+        {
+          text: 'Lawnmowing Job',
+          link: '/rc_mower/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Installation', link: '/rc_mower/install' },
+          ],
+        },
+        {
+          text: 'Admin Guide',
+          collapsed: false,
+          items: [
+            { text: 'Admin Panel', link: '/rc_mower/admin-panel' },
+            { text: 'Yards', link: '/rc_mower/yards' },
+          ],
+        },
+        {
+          text: 'Player Guide',
+          collapsed: false,
+          items: [
+            { text: 'What Players See', link: '/rc_mower/players' },
+          ],
+        },
+        {
+          text: 'Reference',
+          link: '/rc_mower/reference',
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/rc_mower/troubleshooting',
+        },
+      ],
+
+      '/rc_mower_addon/': [
+        {
+          text: 'Lawnmowing Job Addon',
+          link: '/rc_mower_addon/',
+          items: [],
+        },
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Installation', link: '/rc_mower_addon/install' },
+          ],
+        },
+        {
+          text: 'Configuration',
+          collapsed: false,
+          items: [
+            { text: 'All Settings', link: '/rc_mower_addon/config' },
+            { text: 'Custom Props', link: '/rc_mower_addon/custom-props' },
+          ],
+        },
+        {
+          text: 'Player Guide',
+          collapsed: false,
+          items: [
+            { text: 'Gameplay', link: '/rc_mower_addon/gameplay' },
+          ],
+        },
+        {
+          text: 'Troubleshooting',
+          link: '/rc_mower_addon/troubleshooting',
         },
       ],
 
